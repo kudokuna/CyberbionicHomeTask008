@@ -4,7 +4,7 @@ namespace Task_002
 {
     class Program
     {
-        static void SetPaymentValue(ref double payment) 
+        static void SetPaymentValue(out double payment) 
         {
             while (true)
             {
@@ -43,8 +43,8 @@ namespace Task_002
         }
         static void Main(string[] args)
         {
-            double payment = default;
-            SetPaymentValue(ref payment);
+            double payment;
+            SetPaymentValue(out payment);
             CalculateCreditRest(payment);
             Console.ReadKey();
         }
